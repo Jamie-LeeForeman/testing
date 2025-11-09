@@ -1,0 +1,294 @@
+/* IA#2 CSS: Define root variables for consistent theming */
+:root {
+    --primary-bg: #F5F5DC; /* Beige */
+    --secondary-bg: #C0C0C0; /* Silver */
+    --text-color: #4A4A4A; /* Dark Gray */
+    --highlight-bg: #EDE7D0; /* Light Beige */
+    --font-family: 'Times New Roman', Times, serif;
+    --font-weight: 400;
+}
+
+/* IA#2 CSS: Element selector for body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+/* IA#2 CSS: Products page background image */
+body:has(.products) {
+    background-image: url('../Assets/background_picture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* IA#2 CSS: Class selector for navbar */
+.navbar {
+    background-color: var(--secondary-bg);
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* IA#2 CSS: Descendant selector for nav-links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* IA#2 CSS: Pseudo-class selector for hover */
+.nav-links a:hover {
+    color: white;
+}
+
+.logo img {
+    max-width: 200px;
+}
+
+/* IA#2 CSS: Main section styling with Flexbox */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+/* IA#2 CSS: Hero section styling (for index.html) */
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.hero h1:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+.hours, .location {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    background-color: var(--highlight-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    color: var(--text-color);
+    transition: transform 0.2s ease;
+}
+
+.hours:hover, .location:hover {
+    transform: translateY(-3px);
+}
+
+/* IA#2 CSS: Grid layout for products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.product-card {
+    background-color: var(--highlight-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* IA#2 CSS: Hover effect for product cards */
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    margin: 0.5rem 0;
+}
+
+.add-to-cart {
+    background-color: var(--secondary-bg);
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: #A9A9A9; /* Darker silver for hover */
+}
+
+/* IA#2 CSS: View cart button styling */
+.cart-link {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.view-cart {
+    display: inline-block;
+    background-color: var(--secondary-bg);
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.view-cart:hover {
+    background-color: #A9A9A9; /* Darker silver for hover */
+}
+
+/* IA#2 CSS: Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+    color: var(--text-color);
+}
+
+form input {
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 1rem;
+    background-color: var(--secondary-bg);
+    color: black;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #A9A9A9; /* Darker silver for hover */
+}
+
+.error {
+    color: #dc2626;
+    font-size: 0.9rem;
+}
+
+/* IA#2 CSS: Table styling for cart and checkout */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 1rem auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid var(--text-color);
+}
+
+th {
+    background-color: var(--secondary-bg);
+    color: black;
+}
+
+.cart button, .checkout button {
+    margin: 0.5rem;
+}
+
+/* IA#2 CSS: Footer styling */
+footer {
+    background-color: var(--secondary-bg);
+    color: black;
+    text-align: center;
+    padding: 10px;
+    flex-shrink: 0;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* IA#2 CSS: Mobile layout (max 600px) */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* IA#2 CSS: Desktop layout (min 950px) */
+@media (min-width: 950px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.5rem;
+    }
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

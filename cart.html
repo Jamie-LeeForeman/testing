@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>J'dore Home Appliances - Cart</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../Assets/J'dore_Home_Appliances.png" alt="J'dore Home Appliances Logo" style="height: 100px;"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a style="background-color: #F5F5DC" href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="cart">
+            <h1>My Shopping Cart</h1>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Subtotal</td>
+                        <td id="cart-subtotal">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Discount (5%)</td>
+                        <td id="cart-discount">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Tax (15%)</td>
+                        <td id="cart-tax">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td id="cart-total">$0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="clear-cart">Clear All</button>
+            <button id="checkout-btn">Check Out</button>
+        </section>
+    </main>
+    <footer>
+        <p>J'dore Home Appliances © 2025 | <a href="mailto:jamie-leemforeman@studnets.utech.edu.jm">Email: jamie-leemforeman@students.utech.edu.jm</a> | Telephone: 876-213-3955 | <a href="https://whatsapp.com">Whatsapp</a> | <a href="https://instagram.com">Instagram</a> | <a href="https://twitter.com">Twitter</a></p>
+    </footer>
+   <script src="../script.js"></script>
+</body>
+</html>
